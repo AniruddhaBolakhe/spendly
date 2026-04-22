@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block content %}
+
+<section class="page-hero">
+    <h1 class="hero-title">Privacy <em>Policy</em></h1>
+    <p class="hero-subtitle">Last updated: April 2026</p>
+</section>
+
+<section class="legal-section">
+    <div class="legal-inner">
+
+        <h2>1. Data We Collect</h2>
+        <p>When you create an account, we collect your name and email address. As you use Spendly, we store the expense records you log, including amounts, categories, dates, and any descriptions you provide. We do not collect payment information or government-issued identifiers.</p>
+
+        <h2>2. How We Use Your Data</h2>
+        <p>Your data is used solely to provide and improve the Spendly service. This includes displaying your expense history, generating summaries, and enabling filtering and search. We do not use your data for advertising or share it with third parties for marketing purposes.</p>
+
+        <h2>3. Data Storage</h2>
+        <p>Your data is stored on secure servers. We take reasonable technical and organisational measures to protect it against unauthorised access, loss, or disclosure. However, no internet-based service can guarantee absolute security, and you use Spendly at your own risk.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>Spendly may use third-party services for hosting and infrastructure. These providers are bound by their own privacy policies and are not permitted to use your data for any purpose beyond operating the service. We do not currently integrate with third-party analytics or advertising platforms.</p>
+
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or how your data is handled, please reach out to us at <a href="mailto:privacy@spendly.app" style="color: var(--accent);">privacy@spendly.app</a>. We will respond within a reasonable timeframe.</p>
+
+        <a href="{{ url_for('landing') }}" class="legal-back">← Back to home</a>
+
+    </div>
+</section>
+
+{% endblock %}
