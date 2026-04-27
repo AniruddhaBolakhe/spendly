@@ -38,6 +38,23 @@ def init_db():
     conn.close()
 
 
+def create_user(name, email, password):
+    password_hash = generate_password_hash(password)
+    conn = get_db()
+    try:
+        cursor = conn.execute(
+            "INSERT INTO users (name, email, password_hash) VALUES (?, ?, ?)",
+            (name, email, password_hash),
+        )
+        user_id = cursor.lastrowid
+        conn.commit()
+        conn.close()
+        return user_id
+    except sqlite3.IntegrityError:
+        conn.close()
+        raise
+
+
 def seed_db():
     conn = get_db()
 
